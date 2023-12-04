@@ -1,16 +1,16 @@
-data class SymbolPosition(
+private data class SymbolPosition(
     val symbol: Char,
     val abscissa: Int,
     val ordinate: Int
 )
 
-data class Number(
+private data class Number(
     val value: Int,
     val abscissas: IntRange,
     val ordinate: Int
 )
 
-class EngineSchematic(
+private class EngineSchematic(
     private val symbols: List<SymbolPosition>,
     private val numbers: List<Number>
 ) {

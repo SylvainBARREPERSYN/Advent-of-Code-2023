@@ -1,10 +1,10 @@
-enum class Color {
+private enum class Color {
     GREEN,
     RED,
     BLUE
 }
 
-class ColorQuantity private constructor(
+private class ColorQuantity private constructor(
         val value: Int,
         val color: Color
 ) {
@@ -16,7 +16,7 @@ class ColorQuantity private constructor(
     }
 }
 
-class Draw private constructor(
+private class Draw private constructor(
         val colorQuantities: List<ColorQuantity>
 ) {
     companion object {
@@ -29,7 +29,7 @@ class Draw private constructor(
     fun quantity(color: Color) = colorQuantities.firstOrNull { it.color == color }?.value ?: 0
 }
 
-class Game private constructor(
+private class Game private constructor(
         val gameId: Int,
         val draws: List<Draw>
 ) {
